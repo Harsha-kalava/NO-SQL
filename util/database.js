@@ -5,14 +5,13 @@ const MonogClient = mongodb.MongoClient
 let _db
 
 const mongoConnect = (callback)=>{
-  MonogClient.connect('mongodb+srv://harsha:<password>@cluster0.gmvyirq.mongodb.net/?retryWrites=true&w=majority')
+  MonogClient.connect('mongodb+srv://harsha:Noerror@cluster0.gmvyirq.mongodb.net/?retryWrites=true&w=majority')
 .then(client=>{
   console.log('connected!')
   _db = client.db()
   callback()
 })
 .catch(err=>{
-  console.log(err)
   throw err
 })
 }
